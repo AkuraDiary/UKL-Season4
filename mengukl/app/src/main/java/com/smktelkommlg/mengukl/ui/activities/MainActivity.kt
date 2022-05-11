@@ -1,7 +1,8 @@
-package com.smktelkommlg.mengukl
+package com.smktelkommlg.mengukl.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.smktelkommlg.mengukl.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
