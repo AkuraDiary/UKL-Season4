@@ -1,4 +1,6 @@
 package com.smktelkommlg.mengukl.ui.detail
 
-class FragmentDetail {
+import androidx.fragment.app.Fragment
+
+class FragmentDetail : Fragment() {
 }

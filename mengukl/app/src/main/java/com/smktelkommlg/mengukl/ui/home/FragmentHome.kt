@@ -1,4 +1,6 @@
 package com.smktelkommlg.mengukl.ui.home
 
-class FragmentHome {
+import androidx.fragment.app.Fragment
+
+class FragmentHome : Fragment() {
 }
