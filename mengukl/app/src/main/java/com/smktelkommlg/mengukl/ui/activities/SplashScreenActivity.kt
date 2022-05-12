@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.animation.AnimationUtils
+import com.smktelkommlg.mengukl.R
 import com.smktelkommlg.mengukl.databinding.ActivitySplashScreenBinding
 
 @SuppressLint("CustomSplashScreen")
@@ -15,6 +17,13 @@ class SplashScreenActivity : AppCompatActivity() {
         setContentView(splashScreenBinding.root)
 
         supportActionBar?.hide() //hiding the action bar
+
+        val logo = splashScreenBinding.logo
+        val watermark = splashScreenBinding.wm
+        val slideAnim = AnimationUtils.loadAnimation(this, R.anim.splash_anim)
+
+        logo.startAnimation(slideAnim)
+        watermark.startAnimation(slideAnim)
 
         val background = object :Thread(){
             override fun run() {
