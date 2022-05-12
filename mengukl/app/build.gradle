@@ -6,6 +6,7 @@ plugins {
     id 'androidx.navigation.safeargs.kotlin'
     id 'kotlin-parcelize'
 }
+apply from: '../shared_dependencies.gradle'
 
 android {
     compileSdk 32
@@ -37,13 +38,11 @@ android {
         viewBinding true
         dataBinding true
     }
-
-    dynamicFeatures = [':core']
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation project(":cores")
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
