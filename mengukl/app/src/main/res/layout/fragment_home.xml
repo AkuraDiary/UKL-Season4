@@ -25,7 +25,7 @@
             android:focusable="true"
             app:iconifiedByDefault="false"
             app:queryBackground="@color/white"
-            app:queryHint="@string/search_placeholderHint"
+            app:queryHint="@string/hint_search"
             app:showDividers="end" />
 
     </androidx.cardview.widget.CardView>
