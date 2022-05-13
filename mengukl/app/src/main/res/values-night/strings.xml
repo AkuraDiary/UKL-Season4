@@ -2,4 +2,12 @@
 <resources>
     <string name="txt_wm">ini logo</string>
     <string name="empty_data">Tidak Ada Data</string>
+    <string name="deskripsiGambar">Gambar Kos</string>
+    <string name="name_kos_txt">Nama Kost : </string>
+    <string name="txt_alamat">Alamat Kos</string>
+    <string name="text_deskripsi">Ini Deskripsi kos</string>
+    <string name="detail_txt">"Detail Kost : "</string>
+    <string name="Gender_txt">Gender Rertriction :</string>
+    <string name="availableBeds_txt">"Kamar Kosong : "</string>
+    <string name="TotalBeds_txt">Total Kamar :</string>
 </resources>
