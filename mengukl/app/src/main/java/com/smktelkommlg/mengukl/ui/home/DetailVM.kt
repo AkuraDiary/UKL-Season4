@@ -1,4 +1,6 @@
 package com.smktelkommlg.mengukl.ui.home
 
-class DetailVM {
+import androidx.lifecycle.ViewModel
+
+class DetailVM : ViewModel(){
 }
