@@ -24,13 +24,13 @@ class RemoteDataSource(private val clientApi: ClientApi) {
             }
         }.flowOn(Dispatchers.IO)
 
-    suspend fun getItemDetail(name : String) : Flow<ApiResponse<ItemResponse>> =
+    suspend fun getItemDetail(name : String): Flow<ApiResponse<List<ItemResponse>>> =
         flow {
             try {
-                val userSearch = clientApi.searchForItemDetail(name)
-                emit(ApiResponse.IsSuccess(userSearch))
+                val itemDetail = clientApi.searchForItemDetail(name)
+                emit(ApiResponse.IsSuccess(itemDetail))
             }catch (e : Exception){
-                emit(ApiResponse.IsError(e.message.toString()))
+                emit(ApiResponse.IsError(e.toString()))
             }
         }.flowOn(Dispatchers.IO)
 }

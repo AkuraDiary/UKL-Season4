@@ -14,5 +14,5 @@ interface ClientApi {
     @GET("kosts")
     suspend fun searchForItemDetail(
         @Query("q") query: String?
-    ): ItemResponse
+    ): List<ItemResponse>
 }
