@@ -12,7 +12,5 @@
     <string name="TotalBeds_txt">Total Kamar :</string>
     <string name="price_txt">"Harga : "</string>
     <string name="search_placeholderHint">Cari Kos Disini</string>
-    <string name="search_placeholderHint">Cari Kos Disini</string>
-    <string name="search_placeholderHint">Cari Kos Disini</string>
     <string name="hint_search">cari kos disini</string>
 </resources>
