@@ -51,7 +51,7 @@ class FragmentHome : Fragment(), ShowStates {
         super.onViewCreated(view, savedInstanceState)
         setHasOptionsMenu(true)
 
-        bindingHome?.errorLayout?.emptyText?.text = getString(R.string.search_placeholderHint)
+        bindingHome?.errorLayout?.emptyText?.text = "Cari Kos Disini"
 
         homeAdapter = ItemAdapter(arrayListOf()){name, iv ->
             findNavController().navigate(FragmentHomeDirections.actionHomeToDetail(name),
@@ -65,7 +65,7 @@ class FragmentHome : Fragment(), ShowStates {
         }
 
         bindingHome?.searchBar?.apply {
-            queryHint = getString(R.string.search_placeholderHint)
+            queryHint = "Cari Kos Disini"//getString(R.string.search_placeholderHint)
             setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(query: String?): Boolean {
                     homeVM?.setForSearch(query)
