@@ -27,7 +27,7 @@ import org.koin.core.qualifier.Qualifier
 class FragmentHome : Fragment(), ShowStates {
     private var bindingHome: FragmentHomeBinding? = null
     private var homeAdapter: ItemAdapter? = null
-    private var homeVM: HomeVM? = null
+    private val homeVM: HomeVM by sharedGraphViewModel(R.id.main_navigation)
 
     private inline fun<reified VM : ViewModel> Fragment.sharedGraphViewModel(
         @IdRes navGraphId: Int,
@@ -70,7 +70,7 @@ class FragmentHome : Fragment(), ShowStates {
             queryHint = "Cari Kos Disini"//getString(R.string.search_placeholderHint)
             setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(query: String?): Boolean {
-                    homeVM?.setForSearch(query.toString())
+                    homeVM.setForSearch(query.toString())
                     Log.d("FRAGMENT HOME SEARCH", query.toString())
                     bindingHome!!.searchBar.clearFocus()
                     return true
@@ -85,7 +85,7 @@ class FragmentHome : Fragment(), ShowStates {
     }
 
     private fun observeHome() {
-        homeVM?.item?.observe(viewLifecycleOwner){
+        homeVM.item.observe(viewLifecycleOwner){
             if(it != null) {
                 when(it){
                     is Resource.Success ->{
@@ -100,7 +100,7 @@ class FragmentHome : Fragment(), ShowStates {
                     }
 
                     is Resource.Error -> {
-                       homeError(bindingHome, it.message)
+                        homeError(bindingHome, it.message)
                     }
                 }
             }

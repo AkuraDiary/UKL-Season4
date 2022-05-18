@@ -1,4 +1,4 @@
-package com.smktelkommlg
+package com.smktelkommlg.mengukl
 
 import android.app.Application
 import com.smktelkommlg.cores.di.networkModule
