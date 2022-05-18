@@ -6,7 +6,7 @@ import com.smktelkommlg.mengukl.databinding.FragmentHomeBinding
 interface ShowStates {
     fun homeLoading(bindingHome : FragmentHomeBinding? = null)
     fun homeSuccess(bindingHome : FragmentHomeBinding? = null)
-    fun honeError(bindingHome : FragmentHomeBinding? = null)
+    fun homeError(bindingHome : FragmentHomeBinding? = null, message:String?)
 
     val gone : Int
         get() = View.GONE
