@@ -8,11 +8,11 @@ import com.smktelkommlg.cores.domain.usecase.ItemUseCase
 class HomeVM(itemUseCase : ItemUseCase) : ViewModel(){
     private var name : MutableLiveData<String> = MutableLiveData()
 
-    fun setForSearch(query : String){
+    fun setForSearch(query: String?){
         if(name.value == query){
             return
         }
-        name.value = query
+        name.value = query!!
     }
 
     val item : LiveData<Resource<List<Item>>> = Transformations
