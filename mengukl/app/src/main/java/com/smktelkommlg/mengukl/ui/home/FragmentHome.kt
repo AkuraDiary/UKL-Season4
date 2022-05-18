@@ -109,8 +109,9 @@ class FragmentHome : Fragment(), ShowStates {
             errorLayout.apply {
                 mainNotFound.visibility = gone
             }
-            recyclerHome.visibility = gone
             progressBar.visibility = visible
+            recyclerHome.visibility = gone
+
         }
     }
 
