@@ -1,11 +1,13 @@
 package com.smktelkommlg.mengukl.ui.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.IdRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.FragmentNavigatorExtras
@@ -66,9 +68,10 @@ class FragmentHome : Fragment(), ShowStates {
 
         bindingHome?.searchBar?.apply {
             queryHint = "Cari Kos Disini"//getString(R.string.search_placeholderHint)
-            setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(query: String?): Boolean {
-                    homeVM?.setForSearch(query)
+                    homeVM?.setForSearch(query.toString())
+                    Log.d("FRAGMENT HOME SEARCH", query.toString())
                     bindingHome!!.searchBar.clearFocus()
                     return true
                 }

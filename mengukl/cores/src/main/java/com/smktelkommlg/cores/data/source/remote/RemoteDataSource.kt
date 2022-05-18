@@ -1,5 +1,6 @@
 package com.smktelkommlg.cores.data.source.remote
 
+import android.util.Log
 import com.smktelkommlg.cores.data.source.remote.network.ApiResponse
 import com.smktelkommlg.cores.data.source.remote.network.ClientApi
 import com.smktelkommlg.cores.data.source.remote.response.ItemResponse
@@ -11,25 +12,27 @@ import java.lang.Exception
 
 class RemoteDataSource(private val clientApi: ClientApi) {
 
-    suspend fun getAllItem(query : String?) : Flow<ApiResponse<List<ItemResponse>>> =
+    suspend fun getAllItem(query: String?): Flow<ApiResponse<List<ItemResponse>>> =
         flow {
             try {
                 val userSearch = clientApi.searchForItem(query)
-                if(userSearch.isEmpty())
+
+                if (userSearch.isEmpty()) {
                     emit(ApiResponse.IsError("No data found"))
-                else
+                } else {
                     emit(ApiResponse.IsSuccess(userSearch))
-            }catch (e : Exception){
+                }
+            } catch (e: Exception) {
                 emit(ApiResponse.IsError(e.message.toString()))
             }
         }.flowOn(Dispatchers.IO)
 
-    suspend fun getItemDetail(name : String): Flow<ApiResponse<List<ItemResponse>>> =
+    suspend fun getItemDetail(name: String): Flow<ApiResponse<List<ItemResponse>>> =
         flow {
             try {
                 val itemDetail = clientApi.searchForItemDetail(name)
                 emit(ApiResponse.IsSuccess(itemDetail))
-            }catch (e : Exception){
+            } catch (e: Exception) {
                 emit(ApiResponse.IsError(e.toString()))
             }
         }.flowOn(Dispatchers.IO)
