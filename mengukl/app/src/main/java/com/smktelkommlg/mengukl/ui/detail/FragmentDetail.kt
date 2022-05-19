@@ -6,18 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+
 import androidx.navigation.fragment.navArgs
 import com.smktelkommlg.cores.data.Resource
 import com.smktelkommlg.cores.domain.model.Item
 import com.smktelkommlg.mengukl.databinding.FragmentDetailBinding
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class FragmentDetail : Fragment() {
     private var bindingDetail : FragmentDetailBinding? = null
     private lateinit var item : Item
 
     private val args : FragmentDetailArgs by navArgs()
-    private val detailVM : DetailVM by viewModels()
+    private val detailVM : DetailVM by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater,
