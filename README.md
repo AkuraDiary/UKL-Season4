@@ -20,3 +20,11 @@ UKL ANDROID BOISSSSS
 [Home](link)
 
 </details>
+
+
+<details>
+  <summary>Detail</summary>
+  
+[Home](link)
+
+</details>
