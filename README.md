@@ -1,9 +1,10 @@
 # UKL-Season4
 UKL ANDROID BOISSSSS
 
-#tema : kost
+## tema : kost
 
-#screenshoot
+## screenshoot
+//TODO README
 
 <details>
   <summary>Splash</summary>
@@ -11,4 +12,19 @@ UKL ANDROID BOISSSSS
 [Splash](link)
 
 </details>
-//TODO README
+
+
+<details>
+  <summary>Home</summary>
+  
+[Home](link)
+
+</details>
+
+
+<details>
+  <summary>Detail</summary>
+  
+[Home](link)
+
+</details>
