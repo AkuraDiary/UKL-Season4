@@ -9,7 +9,7 @@ UKL ANDROID BOISSSSS
 <details>
   <summary>Splash</summary>
   
-[Splash](link)
+[Splash]()
 
 </details>
 
@@ -17,7 +17,9 @@ UKL ANDROID BOISSSSS
 <details>
   <summary>Home</summary>
   
-[Home](link)
+[Home](https://github.com/AkuraDiary/UKL-Season4/blob/main/ss/home1.png)
+
+[Home](https://github.com/AkuraDiary/UKL-Season4/blob/main/ss/home2.png)
 
 </details>
 
@@ -25,6 +27,6 @@ UKL ANDROID BOISSSSS
 <details>
   <summary>Detail</summary>
   
-[Home](link)
+[Home](https://github.com/AkuraDiary/UKL-Season4/blob/main/ss/detail.png)
 
 </details>
