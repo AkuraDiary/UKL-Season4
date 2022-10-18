@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.smktelkommlg.cores.databinding.ListItemLayoutBinding
-import com.smktelkommlg.cores.domain.model.Item
 
 class ItemAdapter(
     private val item: ArrayList<Item>,

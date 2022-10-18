@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 
 import androidx.navigation.fragment.navArgs
 import com.smktelkommlg.cores.data.Resource
-import com.smktelkommlg.cores.domain.model.Item
 import com.smktelkommlg.mengukl.databinding.FragmentDetailBinding
 import org.koin.android.viewmodel.ext.android.viewModel
 
