@@ -17,7 +17,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
-        buildConfigField("String", "BASE_URL", '"https://kkmboiscuy.my.id/"')
+        buildConfigField('String', 'API_KEY', '"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"')
+        buildConfigField('String', 'BASE_URL', '"https://api.github.com"')
+        //buildConfigField("String", "BASE_URL", '"https://kkmboiscuy.my.id/"')
     }
 
     buildTypes {
