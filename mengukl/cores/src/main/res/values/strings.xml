@@ -3,4 +3,6 @@
     <string name="list_layout_kost_desc">deskripsi kos</string>
     <string name="main_name_placeholder">Nama Kos</string>
     <string name="deskripsi_img_list">GAMBAR</string>
+    <string name="exp_login">Login</string>
+    <string name="exp_url">URL</string>
 </resources>
