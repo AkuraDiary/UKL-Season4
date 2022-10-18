@@ -1,39 +1,62 @@
-package com.smktelkommlg.cores.data.source.remote
+package com.asthiseta.core.data.soure.remote
 
-
-import com.smktelkommlg.cores.data.source.remote.network.ApiResponse
-import com.smktelkommlg.cores.data.source.remote.network.ClientApi
-import com.smktelkommlg.cores.data.source.remote.response.ItemResponse
+import android.util.Log
+import com.asthiseta.core.data.soure.remote.network.ApiResponse
+import com.asthiseta.core.data.soure.remote.network.ClientAPI
+import com.asthiseta.core.data.soure.remote.response.UserResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import java.lang.Exception
 
-class RemoteDataSource(private val clientApi: ClientApi) {
+@Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
+class RemoteDataSource(private val clientAPI: ClientAPI) {
 
-    suspend fun getAllItem(query: String?): Flow<ApiResponse<List<ItemResponse>>> =
+    suspend fun getAllUsers(): Flow<ApiResponse<List<UserResponse>>> =
         flow {
             try {
-                val userSearch = clientApi.searchForItem(query)
-
+                val userSearch = clientAPI.getAllUser()
                 if (userSearch.isEmpty()) {
-                    emit(ApiResponse.IsError("No data found"))
+                    emit(ApiResponse.Error(null))
                 } else {
-                    emit(ApiResponse.IsSuccess(userSearch))
+                    emit(ApiResponse.Success(userSearch))
                 }
             } catch (e: Exception) {
-                emit(ApiResponse.IsError(e.message.toString()))
+                emit(ApiResponse.Error(e.toString()))
+                Log.e(RemoteDataSource::class.java.simpleName, e.localizedMessage)
             }
-        }.flowOn(Dispatchers.Default)
+        }.flowOn(Dispatchers.IO)
 
-    suspend fun getItemDetail(name: String): Flow<ApiResponse<List<ItemResponse>>> =
+    suspend fun getAllFollowers(username: String): Flow<ApiResponse<List<UserResponse>>> =
         flow {
             try {
-                val itemDetail = clientApi.searchForItemDetail(name)
-                emit(ApiResponse.IsSuccess(itemDetail))
+                val userFollower = clientAPI.userFollower(username)
+                emit(ApiResponse.Success(userFollower))
             } catch (e: Exception) {
-                emit(ApiResponse.IsError(e.toString()))
+                emit(ApiResponse.Error(e.toString()))
+                Log.e(RemoteDataSource::class.java.simpleName, e.localizedMessage)
             }
-        }.flowOn(Dispatchers.Default)
+        }.flowOn(Dispatchers.IO)
+
+    suspend fun getAllFollowing(username: String): Flow<ApiResponse<List<UserResponse>>> =
+        flow {
+            try {
+                val userFollowing = clientAPI.userFollowing(username)
+                emit(ApiResponse.Success(userFollowing))
+            } catch (e: Exception) {
+                emit(ApiResponse.Error(e.toString()))
+                Log.e(RemoteDataSource::class.java.simpleName, e.localizedMessage)
+            }
+        }.flowOn(Dispatchers.IO)
+
+    suspend fun getUserDetail(username: String): Flow<ApiResponse<UserResponse>> =
+        flow {
+            try {
+                val userDetail = clientAPI.userDetail(username)
+                emit(ApiResponse.Success(userDetail))
+            } catch (e: Exception) {
+                emit(ApiResponse.Error(e.toString()))
+                Log.e(RemoteDataSource::class.java.simpleName, e.localizedMessage)
+            }
+        }.flowOn(Dispatchers.IO)
 }

@@ -1,6 +1,6 @@
-package com.smktelkommlg.cores.data.source.remote.network
+package com.asthiseta.core.data.soure.remote.network
 
 sealed class ApiResponse<out T> {
-    data class IsSuccess<out T>(val data: T) : ApiResponse<T>()
-    data class IsError(val errorMessage: String) : ApiResponse<Nothing>()
+    data class Success<out T>(val data: T) : ApiResponse<T>()
+    data class Error(val errorMessage : String?) : ApiResponse<Nothing>()
 }

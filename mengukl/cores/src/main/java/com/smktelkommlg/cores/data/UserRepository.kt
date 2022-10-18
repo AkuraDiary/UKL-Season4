@@ -3,14 +3,15 @@ package com.asthiseta.core.data
 import com.asthiseta.core.data.soure.remote.RemoteDataSource
 import com.asthiseta.core.data.soure.remote.network.ApiResponse
 import com.asthiseta.core.data.soure.remote.response.UserResponse
-import com.asthiseta.core.domain.model.User
-import com.asthiseta.core.domain.repository.IUserRepository
-import com.asthiseta.core.util.DataMapper
+import com.smktelkommlg.cores.domain.model.User
+import com.smktelkommlg.cores.domain.repository.IUserRepository
+import com.smktelkommlg.cores.utilities.DataMapper
+
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.flow.*
 
 
-class UserRepository(private val remoteDataSource : RemoteDataSource) : IUserRepository{
+class UserRepository(private val remoteDataSource : RemoteDataSource) : IUserRepository {
     override fun getAllUsers(): Flow<Resource<List<User>>> {
         return object : NetOnlyResource<List<User>, List<UserResponse>>(),
             Flow<Resource<List<User>>> {
