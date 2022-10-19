@@ -1,12 +1,13 @@
-package com.asthiseta.bismillahtest.galeri
+package com.smktelkommlg.mengukl.galeri
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import com.asthiseta.core.data.Resource
-import com.asthiseta.core.domain.model.User
-import com.asthiseta.core.domain.usecase.UserUseCase
+import com.smktelkommlg.cores.data.Resource
+import com.smktelkommlg.cores.domain.model.User
+import com.smktelkommlg.cores.domain.usecase.UserUseCase
+
 
 class GalleryViewModel(userUseCase : UserUseCase) : ViewModel()  {
 

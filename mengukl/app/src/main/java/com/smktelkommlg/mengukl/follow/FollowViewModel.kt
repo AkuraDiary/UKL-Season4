@@ -1,10 +1,11 @@
-package com.asthiseta.bismillahtest.follow
+package com.smktelkommlg.mengukl.follow
 
 import androidx.lifecycle.*
-import com.asthiseta.bismillahtest.util.TypeView
-import com.asthiseta.core.data.Resource
-import com.asthiseta.core.domain.model.User
-import com.asthiseta.core.domain.usecase.UserUseCase
+import com.smktelkommlg.cores.data.Resource
+import com.smktelkommlg.cores.domain.model.User
+import com.smktelkommlg.cores.domain.usecase.UserUseCase
+import com.smktelkommlg.mengukl.util.TypeView
+
 
 class FollowViewModel(userUseCase: UserUseCase) : ViewModel(){
     private var username : MutableLiveData<String> = MutableLiveData()

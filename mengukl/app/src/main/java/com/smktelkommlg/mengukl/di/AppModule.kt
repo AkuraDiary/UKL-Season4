@@ -1,8 +1,8 @@
 package com.smktelkommlg.mengukl.di
 
 import com.asthiseta.bismillahtest.detail.DetailViewModel
-import com.asthiseta.bismillahtest.follow.FollowViewModel
-import com.asthiseta.bismillahtest.galeri.GalleryViewModel
+import com.smktelkommlg.mengukl.follow.FollowViewModel
+import com.smktelkommlg.mengukl.galeri.GalleryViewModel
 import com.smktelkommlg.mengukl.home.HomeViewModel
 import com.smktelkommlg.cores.domain.usecase.UserInteractor
 import com.smktelkommlg.cores.domain.usecase.UserUseCase

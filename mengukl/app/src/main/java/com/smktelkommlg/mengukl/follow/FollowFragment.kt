@@ -15,6 +15,7 @@ import com.asthiseta.bismillahtest.util.TypeView
 import com.asthiseta.core.data.Resource
 import com.asthiseta.core.ui.UserAdapter
 import com.shashank.sony.fancytoastlib.FancyToast
+import com.smktelkommlg.mengukl.follow.FollowViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class FollowFragment : Fragment() , ShowState{
