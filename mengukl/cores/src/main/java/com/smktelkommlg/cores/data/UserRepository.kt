@@ -1,8 +1,10 @@
 package com.asthiseta.core.data
 
-import com.asthiseta.core.data.soure.remote.RemoteDataSource
+import com.smktelkommlg.cores.data.source.remote.RemoteDataSource
 import com.asthiseta.core.data.soure.remote.network.ApiResponse
-import com.asthiseta.core.data.soure.remote.response.UserResponse
+import com.smktelkommlg.cores.data.source.remote.response.UserResponse
+import com.smktelkommlg.cores.data.NetOnlyResource
+import com.smktelkommlg.cores.data.Resource
 import com.smktelkommlg.cores.domain.model.User
 import com.smktelkommlg.cores.domain.repository.IUserRepository
 import com.smktelkommlg.cores.utilities.DataMapper

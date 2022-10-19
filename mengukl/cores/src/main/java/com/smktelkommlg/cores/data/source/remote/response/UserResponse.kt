@@ -1,4 +1,4 @@
-package com.asthiseta.core.data.soure.remote.response
+package com.smktelkommlg.cores.data.source.remote.response
 
 import com.squareup.moshi.Json
 

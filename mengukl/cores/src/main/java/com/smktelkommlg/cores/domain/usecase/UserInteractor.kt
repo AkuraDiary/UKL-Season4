@@ -1,6 +1,6 @@
 package com.smktelkommlg.cores.domain.usecase
 
-import com.asthiseta.core.data.Resource
+import com.smktelkommlg.cores.data.Resource
 import com.smktelkommlg.cores.domain.model.User
 import com.smktelkommlg.cores.domain.repository.IUserRepository
 

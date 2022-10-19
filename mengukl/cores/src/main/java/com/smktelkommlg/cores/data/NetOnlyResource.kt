@@ -1,4 +1,4 @@
-package com.asthiseta.core.data
+package com.smktelkommlg.cores.data
 
 import com.asthiseta.core.data.soure.remote.network.ApiResponse
 import kotlinx.coroutines.flow.*

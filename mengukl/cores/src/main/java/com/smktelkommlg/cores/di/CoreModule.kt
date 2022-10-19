@@ -3,6 +3,7 @@ package com.smktelkommlg.cores.di
 import com.asthiseta.core.data.UserRepository
 import com.asthiseta.core.data.soure.remote.network.ClientAPI
 import com.smktelkommlg.cores.BuildConfig
+import com.smktelkommlg.cores.data.source.remote.RemoteDataSource
 import com.smktelkommlg.cores.domain.repository.IUserRepository
 import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
@@ -47,7 +48,7 @@ val networkModule = module {
 }
 
 val repositoryModule = module {
-    single{ com.asthiseta.core.data.soure.remote.RemoteDataSource(get()) }
+    single{ RemoteDataSource(get()) }
     single<IUserRepository>{
         UserRepository(
             get()

@@ -1,6 +1,6 @@
 package com.smktelkommlg.cores.utilities
 
-import com.asthiseta.core.data.soure.remote.response.UserResponse
+import com.smktelkommlg.cores.data.source.remote.response.UserResponse
 import com.smktelkommlg.cores.data.source.remote.response.ItemResponse
 import com.smktelkommlg.cores.domain.model.User
 import kotlinx.coroutines.flow.Flow

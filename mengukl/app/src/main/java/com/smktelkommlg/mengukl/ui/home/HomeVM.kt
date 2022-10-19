@@ -3,7 +3,6 @@ package com.smktelkommlg.mengukl.ui.home
 import android.util.Log
 import androidx.lifecycle.*
 import com.smktelkommlg.cores.data.Resource
-import com.smktelkommlg.cores.domain.usecase.ItemUseCase
 
 class HomeVM(itemUseCase : ItemUseCase) : ViewModel(){
     private var name : MutableLiveData<String> = MutableLiveData()
