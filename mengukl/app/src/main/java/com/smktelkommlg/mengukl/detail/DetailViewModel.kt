@@ -1,8 +1,9 @@
-package com.asthiseta.bismillahtest.detail
+package com.smktelkommlg.mengukl.detail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import com.asthiseta.core.domain.usecase.UserUseCase
+import com.smktelkommlg.cores.domain.usecase.UserUseCase
+
 
 class DetailViewModel(private val userUseCase: UserUseCase) : ViewModel() {
 

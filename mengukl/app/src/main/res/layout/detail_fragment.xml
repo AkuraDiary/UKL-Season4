@@ -9,7 +9,7 @@
 
         <variable
             name="data"
-            type="com.smkelkommlg.core.domain.model.User" />
+            type="com.smktelkommlg.cores.domain.model.User" />
     </data>
 
     <LinearLayout

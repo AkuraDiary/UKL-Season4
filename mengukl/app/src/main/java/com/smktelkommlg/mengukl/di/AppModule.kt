@@ -1,6 +1,6 @@
 package com.smktelkommlg.mengukl.di
 
-import com.asthiseta.bismillahtest.detail.DetailViewModel
+import com.smktelkommlg.mengukl.detail.DetailViewModel
 import com.smktelkommlg.mengukl.follow.FollowViewModel
 import com.smktelkommlg.mengukl.galeri.GalleryViewModel
 import com.smktelkommlg.mengukl.home.HomeViewModel
