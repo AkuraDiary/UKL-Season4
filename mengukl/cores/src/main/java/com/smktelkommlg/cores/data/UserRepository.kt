@@ -1,7 +1,7 @@
-package com.asthiseta.core.data
+package com.smkelkommlg.core.data
 
 import com.smktelkommlg.cores.data.source.remote.RemoteDataSource
-import com.asthiseta.core.data.soure.remote.network.ApiResponse
+import com.smkelkommlg.core.data.soure.remote.network.ApiResponse
 import com.smktelkommlg.cores.data.source.remote.response.UserResponse
 import com.smktelkommlg.cores.data.NetOnlyResource
 import com.smktelkommlg.cores.data.Resource

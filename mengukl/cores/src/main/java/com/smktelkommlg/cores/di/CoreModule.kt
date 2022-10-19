@@ -1,7 +1,7 @@
 package com.smktelkommlg.cores.di
 
-import com.asthiseta.core.data.UserRepository
-import com.asthiseta.core.data.soure.remote.network.ClientAPI
+import com.smkelkommlg.core.data.UserRepository
+import com.smkelkommlg.core.data.soure.remote.network.ClientAPI
 import com.smktelkommlg.cores.BuildConfig
 import com.smktelkommlg.cores.data.source.remote.RemoteDataSource
 import com.smktelkommlg.cores.domain.repository.IUserRepository

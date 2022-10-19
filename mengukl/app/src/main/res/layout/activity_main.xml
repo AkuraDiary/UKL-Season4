@@ -8,18 +8,19 @@
     tools:context=".ui.activities.MainActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/main_toolbar"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/nav_host"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
         android:orientation="vertical"
+        android:layout_weight="2"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <androidx.fragment.app.FragmentContainerView
+        <fragment
             android:id="@+id/nav_host"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
@@ -27,10 +28,16 @@
             android:layout_weight="1"
             app:defaultNavHost="true"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-            app:layout_constraintBottom_toTopOf="parent"
-            app:navGraph="@navigation/main_navigation"
-            tools:ignore="NestedWeights" />
+            app:navGraph="@navigation/user_navigation"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavView"
+            tools:ignore="FragmentTagUsage,NestedWeights" />
 
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            app:menu="@menu/bottom_nav_menu"
+            app:layout_constraintTop_toBottomOf="@id/nav_host"/>
     </LinearLayout>
-
 </LinearLayout>

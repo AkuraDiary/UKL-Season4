@@ -1,4 +1,4 @@
-package com.asthiseta.core.data.soure.remote.network
+package com.smkelkommlg.core.data.soure.remote.network
 
 sealed class ApiResponse<out T> {
     data class Success<out T>(val data: T) : ApiResponse<T>()

@@ -1,6 +1,6 @@
 package com.smktelkommlg.cores.data
 
-import com.asthiseta.core.data.soure.remote.network.ApiResponse
+import com.smkelkommlg.core.data.soure.remote.network.ApiResponse
 import kotlinx.coroutines.flow.*
 
 abstract class NetOnlyResource<ResultType, RequestType> {
