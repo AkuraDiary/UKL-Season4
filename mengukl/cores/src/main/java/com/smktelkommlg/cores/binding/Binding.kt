@@ -2,9 +2,9 @@ package com.smktelkommlg.cores.binding
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
-import com.smkelkommlg.core.R
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.smktelkommlg.cores.R
 
 @BindingAdapter("avatar")
 fun avatar(imageView: ImageView, avatar: String) =

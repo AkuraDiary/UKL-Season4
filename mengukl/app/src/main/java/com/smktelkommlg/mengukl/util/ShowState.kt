@@ -1,8 +1,9 @@
 package com.smktelkommlg.mengukl.util
 
-import com.asthiseta.bismillahtest.databinding.FollowFragmentBinding
-import com.asthiseta.bismillahtest.databinding.FragmentGalleryBinding
-import com.asthiseta.bismillahtest.databinding.HomeFragmentBinding
+import com.smktelkommlg.mengukl.databinding.FollowFragmentBinding
+import com.smktelkommlg.mengukl.databinding.FragmentGalleryBinding
+import com.smktelkommlg.mengukl.databinding.HomeFragmentBinding
+
 
 interface ShowState {
 

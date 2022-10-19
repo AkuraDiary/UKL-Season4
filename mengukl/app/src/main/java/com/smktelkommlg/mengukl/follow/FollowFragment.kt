@@ -1,4 +1,4 @@
-package com.asthiseta.bismillahtest.follow
+package com.smktelkommlg.mengukl.follow
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,19 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.asthiseta.bismillahtest.R
-import com.asthiseta.bismillahtest.databinding.FollowFragmentBinding
-import com.asthiseta.bismillahtest.databinding.FragmentGalleryBinding
-import com.asthiseta.bismillahtest.databinding.HomeFragmentBinding
-import com.asthiseta.bismillahtest.util.ShowState
-import com.asthiseta.bismillahtest.util.TypeView
-import com.asthiseta.core.data.Resource
-import com.asthiseta.core.ui.UserAdapter
 import com.shashank.sony.fancytoastlib.FancyToast
-import com.smktelkommlg.mengukl.follow.FollowViewModel
+import com.smktelkommlg.cores.adapter.UserAdapter
+import com.smktelkommlg.cores.data.Resource
+import com.smktelkommlg.mengukl.R
+import com.smktelkommlg.mengukl.databinding.FollowFragmentBinding
+import com.smktelkommlg.mengukl.databinding.FragmentGalleryBinding
+import com.smktelkommlg.mengukl.databinding.HomeFragmentBinding
+import com.smktelkommlg.mengukl.util.ShowState
+import com.smktelkommlg.mengukl.util.TypeView
 import org.koin.android.viewmodel.ext.android.viewModel
 
-class FollowFragment : Fragment() , ShowState{
+class FollowFragment : Fragment() , ShowState {
 
     private var _followBinding : FollowFragmentBinding? = null
     private val followBinding get() = _followBinding!!
